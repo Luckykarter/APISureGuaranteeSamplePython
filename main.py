@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     data["GuaranteeApplicationDetails"]["PartyReference"]["ApplicantReference"] = datetime.now().strftime("%m%d%Y")
 
-    http_response, json_data = connector.send_request(url=url, data=data)
+    response = connector.send_request(url=url, data=data)
 
-    print(http_response)
-    pp(json_data)
+    print(response)
+    pp(response.json())

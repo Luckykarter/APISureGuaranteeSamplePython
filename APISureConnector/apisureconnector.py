@@ -32,4 +32,4 @@ class APISureConnector:
         }
 
         response = requests.post(url, json=data, headers=headers)
-        return response, response.json()
+        return response
